@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 2px;
+}
+nav{
+    background: rgb(36, 36, 36);
+    color: aliceblue;
+    height: 3vw;
+    display: flex;
+    align-items: center;
+    font-weight: 200;
+    font-size: 1.6vw;
+    padding-left: 10px;
+    font-family: 'Roboto', 'sans-serif';
+}
+.gameContainer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3.25%;
+}
+.box{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+}
+.textBox{
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 5vw;
+}
+.textBox:hover{
+    background: rgb(153, 225, 236);
+    cursor: pointer;
+}
+.line{
+    margin-top: 10px;
+    background: black;
+    height : .01vw;
+    width : 30vw;
+    display: none;
+    transition: width .5s ease-in-out;
+}
+.bt{
+    border-top: 0;
+}
+.bb{
+    border-bottom: 0;
+}
+.bl{
+    border-left: 0;
+}
+.br{
+    border-right: 0;
+}
+.imgContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img{
+    margin-top: 1.3vw;
+    height: 0px;
+    width: 0px;
+    transition: width 1s ease-in-out;
+}
+.gameInfo{
+    margin-top: 1vw;
+    display: flex;
+    justify-content: space-between;
+}
+.turn,.reset{
+    font-family: 'Roboto', 'sans-serif';
+    font-weight: 300;
+    font-size: 1.7vw;
+}
+.reset{
+    border: 3px solid black;
+    background-color: rgb(130, 123, 229);
+    border-radius: 10%;
+    font-size: 1.5vw;
+}
+.reset:hover{
+    cursor: pointer;
+    background-color: rgb(111, 219, 196);
+} 
+@media screen and (max-width: 1000px)
+{
+    .gameContainer{
+        padding-top: 7vw;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .box{
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);
+    }
+    .textBox{
+        font-size: 8vw;
+    }
+    .info{
+        padding-top: 7vw;
+    }
+    .line{
+        width: 60vw;
+    }
+    nav{
+        height: 9vw;
+        font-size: 4.5vw;
+    }
+    .line{
+        width: 60vw;
+    }
+    .turn{
+        font-weight: 600;
+        font-size: 5.5vw;
+    }
+    .reset{
+        font-weight: 600;
+        font-size: 5vw;
+        background-color: rgb(130, 123, 229);
+    }
+    .reset:hover{
+        cursor: pointer;
+        background-color: rgb(111, 219, 196);
+    } 
+}
